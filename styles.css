@@ -1,0 +1,210 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fef9ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+
+  /* Contenedor principal */
+  .container {
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos del cielo */
+  .sky {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, #a7c7fa, #fef9ef);
+  }
+  
+  .sun {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #fffdbc, #ffdd67);
+    border-radius: 50%;
+    animation: shine 6s infinite alternate;
+  }
+  
+  @keyframes shine {
+    from {
+      transform: translateX(-50%) scale(1);
+    }
+    to {
+      transform: translateX(-50%) scale(1.1);
+    }
+  }
+  
+  /* Nubes animadas */
+  .cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: float 10s infinite;
+  }
+  
+  .cloud1 {
+    width: 110px;
+    height: 70px;
+    top: 20%;
+    left: 15%;
+    animation-delay: 1s;
+  }
+  
+  .cloud2 {
+    width: 130px;
+    height: 80px;
+    top: 10%;
+    left: 45%;
+    animation-delay: 2s;
+  }
+  
+  .cloud3 {
+    width: 100px;
+    height: 60px;
+    top: 25%;
+    left: 75%;
+    animation-delay: 3s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos del mural */
+  .mural {
+    margin-top: 30px;
+    background: rgba(255, 248, 220, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    box-shadow: 0 10px 25px rgba(255, 213, 0, 0.5);
+  }
+  
+  .mural h1 {
+    font-size: 2.3rem;
+    color: #ff6f91;
+  }
+  
+  .mural h1 span {
+    color: #ffb4c8;
+  }
+  
+  .mural p {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ff96db;
+  }
+  
+  /* Globos flotantes */
+  .balloon {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    height: 90px;
+    background: radial-gradient(circle, #ffadc9, #f74e7e);
+    border-radius: 50%;
+    animation: floatBalloon 6s ease-in-out infinite;
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background: #bbb;
+  }
+  
+  @keyframes floatBalloon {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-150px) rotate(-5deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(5deg);
+    }
+  }
+  
+  /* Sección de recuerdos */
+  .memory-section {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 239, 230, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 145, 157, 0.3);
+  }
+  
+  .memory-section h2 {
+    font-size: 2rem;
+    color: #ff6f91;
+  }
+  
+  .memory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .memory img,
+  .memory video {
+    border-radius: 15px;
+  }
+  
+  .memory-description {
+    margin-left: 20px;
+    text-align: left;
+    color: #444;
+  }
+  
+  .memory-description h3 {
+    font-size: 1.5rem;
+    color: #f76f91;
+  }
+  
+  .memory-description p {
+    margin-top: 10px;
+    color: #6c6c6c;
+    font-size: 1rem;
+  }
+  
