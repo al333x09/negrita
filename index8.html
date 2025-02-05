@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+<title>...</title>
+</head>
+<body>
+<h1>🦋Recuerdos en fotos🦋</h1>
+<div class="galeria-container">
+  <div class="galeria">
+    <div class="imagenes">
+      <img class="imagen" src="index8/8A.jpg" alt="Imagen 1">
+      <img class="imagen" src="index8/8B.jpg" alt="Imagen 2">
+      <img class="imagen" src="index8/8C.jpg" alt="Imagen 3">
+      <img class="imagen" src="index8/8D.jpg" alt="Imagen 4">
+      <img class="imagen" src="index8/8E.jpg" alt="Imagen 5">
+    
+    </div>
+  </div>
+  <div class="botones">
+    <button onclick="moverIzquierda()">Anterior</button>
+    <button onclick="moverDerecha()">Siguiente</button>
+  </div>
+</div>
+<div class="memory-description">
+    <h3>🦋Mi Negrita Bella🦋</h3>
+        <p>"Sé que tu luz brilla ahora en el cielo, pero mi corazón guarda la esperanza de que algún día, en otra vida, nuestras estrellas se cruzan de nuevo y podemos brillar juntas para siempre".</p>
+    
+  </div>
+</div>
+
+<ul>
+  <p><h3>Accesibilidad</h3></p>
+  <div class="contenedor">
+      <li> <a href="index1.html"><button class="btn">Recuerdos en Videos</button></a></li>
+      <li> <a href="index2.html"><button class="btn">Mi Negrita Bella</button></a></li>
+        <li> <a href="index5.html"><button class="btn">Mia Y Alancito</button></a></li>
+        <li> <a href="index6.html"><button class="btn">Reflexion</button></a></li>
+        <li> <a href="index10.html"><button class="btn">Recuerdos en General</button></a></li>
+          <li> <a href="index9.html"><button class="btn">Recuerdos en Fotos 2</button></a></li>
+</div>
+</ul>
+
+
+ <script>
+    let posicion = 0;
+const imagenes = document.querySelector('.imagenes');
+const imagenAncho = imagenes.offsetWidth / imagenes.children.length;
+
+function moverIzquierda() {
+  posicion = Math.max(0, posicion - imagenAncho);
+  actualizarGaleria();
+}
+
+function moverDerecha() {
+  posicion = Math.min(imagenes.offsetWidth - imagenes.parentNode.offsetWidth, posicion + imagenAncho);
+  actualizarGaleria();
+}
+
+function actualizarGaleria() {
+  imagenes.style.transform = `translateX(-${posicion}px)`;
+}
+
+ </script>
+
+</body>
+</html>
